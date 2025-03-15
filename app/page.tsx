@@ -434,6 +434,233 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Founder's Word Section */}
+        <section className="py-16 bg-gradient-to-r from-amber-50 to-orange-50">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur-md"></div>
+                <div className="relative rounded-xl overflow-hidden border-2 border-white">
+                  <Image
+                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop"
+                    alt="Founder of Pushpa Amrutulya"
+                    width={600}
+                    height={700}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-white rounded-lg shadow-lg p-4 max-w-[200px]">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_14-3-2025_204015_-removebg-preview-YxnsXjRuqUrhXTL60DK2r5EJ7rHJZg.png"
+                    alt="Pushpa Amrutulya Logo"
+                    width={180}
+                    height={60}
+                    className="h-auto"
+                  />
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="inline-block bg-primary/10 px-4 py-1 rounded-full">
+                  <p className="text-sm font-medium text-primary">Founder's Message</p>
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight">A Word From Our Founder</h2>
+                <div className="relative">
+                  <svg
+                    className="absolute -left-4 -top-4 h-8 w-8 text-primary/20"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <p className="text-lg text-muted-foreground italic">
+                    "When I started Pushpa Amrutulya over 35 years ago, my vision was simple - to serve authentic tea
+                    that brings people together. Today, I'm proud to see how our franchise family has grown while
+                    maintaining the same quality and tradition that we began with."
+                  </p>
+                </div>
+                <div className="pt-4 border-t">
+                  <h4 className="font-bold text-xl">Rajesh Amrutulya</h4>
+                  <p className="text-muted-foreground">Founder & CEO, Pushpa Amrutulya</p>
+                </div>
+                <p className="text-muted-foreground">
+                  With over three decades of experience in the tea industry, Rajesh has built Pushpa Amrutulya from a
+                  single tea stall to one of India's most beloved tea franchise opportunities. His commitment to quality
+                  and authentic flavors remains at the heart of our business.
+                </p>
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                  Read Full Story
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Photo Gallery Section */}
+        <section className="py-16">
+          <div className="container space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold tracking-tight">Photo Gallery</h2>
+              <p className="text-muted-foreground max-w-[700px] mx-auto">
+                Explore our tea shops, products, and happy customers through our photo gallery.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                {
+                  src: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?q=80&w=2070&auto=format&fit=crop",
+                  alt: "Steaming cup of tea",
+                  category: "Products",
+                },
+                {
+                  src: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=1974&auto=format&fit=crop",
+                  alt: "Tea shop exterior",
+                  category: "Locations",
+                },
+                {
+                  src: "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?q=80&w=1974&auto=format&fit=crop",
+                  alt: "Masala chai preparation",
+                  category: "Preparation",
+                },
+                {
+                  src: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=2121&auto=format&fit=crop",
+                  alt: "Tea leaves",
+                  category: "Ingredients",
+                },
+                {
+                  src: "https://images.unsplash.com/photo-1517231925375-bf2cb42917a5?q=80&w=2069&auto=format&fit=crop",
+                  alt: "Tea shop interior",
+                  category: "Interiors",
+                },
+                {
+                  src: "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2070&auto=format&fit=crop",
+                  alt: "Tea counter",
+                  category: "Service",
+                },
+                {
+                  src: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?q=80&w=2070&auto=format&fit=crop",
+                  alt: "Samosas and snacks",
+                  category: "Food",
+                },
+                {
+                  src: "https://images.unsplash.com/photo-1593443320739-77f74939d0da?q=80&w=1936&auto=format&fit=crop",
+                  alt: "Ginger tea",
+                  category: "Specials",
+                },
+              ].map((item, index) => (
+                <div key={index} className="group relative aspect-square rounded-lg overflow-hidden cursor-pointer">
+                  <Image
+                    src={item.src || "/placeholder.svg"}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 flex flex-col justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="self-start bg-primary/80 text-white text-xs px-2 py-1 rounded">{item.category}</div>
+                    <div className="self-end">
+                      <div className="bg-white/80 backdrop-blur-sm p-2 rounded text-xs">{item.alt}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center">
+              <Button variant="outline" className="mt-8">
+                View All Photos
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Gallery Section */}
+        <section className="py-16 bg-muted/50">
+          <div className="container space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold tracking-tight">Video Gallery</h2>
+              <p className="text-muted-foreground max-w-[700px] mx-auto">
+                Watch videos about our franchise success stories, tea preparation, and more.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  thumbnail:
+                    "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?q=80&w=1974&auto=format&fit=crop",
+                  title: "The Art of Making Perfect Masala Chai",
+                  duration: "3:45",
+                  views: "12K",
+                },
+                {
+                  thumbnail:
+                    "https://images.unsplash.com/photo-1517231925375-bf2cb42917a5?q=80&w=2069&auto=format&fit=crop",
+                  title: "Franchise Success Story: Mumbai Branch",
+                  duration: "5:20",
+                  views: "8.5K",
+                },
+                {
+                  thumbnail:
+                    "https://images.unsplash.com/photo-1525480122447-64809d765ec4?q=80&w=1974&auto=format&fit=crop",
+                  title: "Behind the Scenes: Our Tea Selection Process",
+                  duration: "4:15",
+                  views: "6.2K",
+                },
+              ].map((video, index) => (
+                <div
+                  key={index}
+                  className="group bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all"
+                >
+                  <div className="relative aspect-video overflow-hidden">
+                    <Image
+                      src={video.thumbnail || "/placeholder.svg"}
+                      alt={video.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                      {video.duration}
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-medium text-lg">{video.title}</h3>
+                    <div className="flex items-center justify-between mt-2">
+                      <span className="text-sm text-muted-foreground">{video.views} views</span>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-primary hover:text-primary/90 hover:bg-primary/10 p-0"
+                      >
+                        Watch Now
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center">
+              <Button className="mt-8 bg-primary hover:bg-primary/90 text-white">View All Videos</Button>
+            </div>
+          </div>
+        </section>
+
         {/* Gallery Section */}
         <section className="py-16 bg-muted/50">
           <div className="container space-y-12">
